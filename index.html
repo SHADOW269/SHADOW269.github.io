@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHADOW - Futuristic Design</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
     <header>
@@ -68,8 +69,90 @@
         </div>
     </section>
 
+    <div id="particles-js"></div>
+
     <footer>
         <p>&copy; 2024 Sakshith C Shetty. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80, // Number of particles
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#7BD3EA" // Particle color (same as your hover color)
+                },
+                shape: {
+                    type: "circle", // Shape of the particles
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3, // Particle size
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 4,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#7BD3EA", // Color of the lines between particles
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse" // Mode where particles move away from the mouse on hover
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push" // Adds more particles on mouse click
+                    }
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+        
 </body>
 </html>
