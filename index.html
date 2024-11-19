@@ -3,100 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHADOW</title>
-    <style>
-        body {
-            background-color: #0f0f0f;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .title {
-            font-size: 36px;
-            white-space: pre;
-            line-height: 1.2;
-        }
-
-        .info {
-            margin-top: 20px;
-        }
-
-        a {
-            color: #00ff00;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .typing {
-            border-right: 2px solid #00ff00;
-            display: inline-block;
-            animation: blink 0.7s step-end infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-    </style>
+    <title>SHADOW - Futuristic Design</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="title" id="asciiArt"></div>
-    <div class="info" id="info"></div>
+    <header>
+        <h1 class="hero-title">
+            <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=2500&lines=YO+🤚;+I'm+Sakshith+C+Shetty!;+Also+Know+As+SHADOW;" alt="Hero title with typing animation" />
+        </h1>
+    </header>
 
-    <script>
-        const asciiArt = `
-   _____ __    __  _____   _______ 
-  / ___/ \\ \\  / / /  _  \\ |  _____|
- | |  _   \\ \\/ /  | |_| | | |___  
- | | |_|   \\  /   |  _  { |  ___| 
- | |___    / /    | |_| | | |____ 
-  \\____|  /_/     \\_____/ |______|
-        `;
+    <section class="about">
+        <h2>💫 About Me:</h2>
+        <p>🏫 College: <strong>Maps College Mangalore</strong></p>
+        <p>🔭 I’m currently working on: <a href="https://github.com/SHADOW269/FARMING_WEB" target="_blank">🌾 FARMING WEB</a></p>
+    </section>
 
-        const infoText = `
-Developer / Student / Gamer
+    <section class="connect">
+        <h2>🌐 Connect with me:</h2>
+        <div class="social-links">
+            <a href="https://instagram.com/sakshithshetty69" target="_blank" aria-label="Instagram"><img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" /></a>
+            <a href="https://x.com/@SHADOW__269" target="_blank" aria-label="Twitter"><img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" /></a>
+            <a href="https://linkedin.com/in/sakshith-shetty-mk269/" target="_blank" aria-label="LinkedIn"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" /></a>
+            <a href="https://discord.gg/Ma6SX4cQ8e" target="_blank" aria-label="Discord"><img src="https://skillicons.dev/icons?i=discord" alt="Discord" /></a>
+        </div>
+    </section>
 
-instagram : https://www.instagram.com/shadow_045/
-twitter   : https://twitter.com/shadow_045
-github    : https://github.com/shadowDev045
-youtube   : https://www.youtube.com/channel/YourChannel
-discord id: SHADOW#7422
-Mallucity : https://discord.gg/YOURSERVER
-Website   : https://yourwebsite.com
-Business  : shadow@proton.me
-`;
+    <section class="skills">
+        <h2>⚒️ Languages-Frameworks-Tools:</h2>
+        <div class="skill-icons">
+            <img src="https://skillicons.dev/icons?i=html,css,javascript,c,cpp,cs,dotnet,git" alt="Skill icons HTML, CSS, JavaScript, C, C++, C#, .NET, Git" />
+            <img src="https://skillicons.dev/icons?i=java,mysql,python,r,github,vscode,pycharm,linux" alt="Skill icons Java, MySQL, Python, R, GitHub, VSCode, PyCharm, Linux" />
+        </div>
+    </section>
 
-        const asciiElement = document.getElementById('asciiArt');
-        const infoElement = document.getElementById('info');
-        let asciiIndex = 0;
-        let infoIndex = 0;
+    <section class="stats">
+        <h2>📊 LeetCode & Roadmap.sh Stats:</h2>
+        <div class="stat-images">
+            <img src="https://leetcard.jacoblin.cool/shadow2669?theme=dark" alt="LeetCode Stats" />
+            <a href="https://roadmap.sh"><img src="https://roadmap.sh/card/wide/6720ee5931d65c235d76799d?variant=dark" alt="Roadmap.sh" /></a>
+        </div>
+    </section>
 
-        function typeAsciiArt() {
-            if (asciiIndex < asciiArt.length) {
-                asciiElement.textContent += asciiArt[asciiIndex];
-                asciiIndex++;
-                setTimeout(typeAsciiArt, 50); // Adjust typing speed
-            } else {
-                typeInfo();
-            }
-        }
+    <section class="github-stats">
+        <h2>📊 GitHub Stats:</h2>
+        <div class="github-stats-images">
+            <img src="https://github-readme-stats.vercel.app/api?username=shadow269&show_icons=true&locale=en&theme=dark&hide_border=true" alt="GitHub Stats" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SHADOW269&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=6&theme=dark&hide_border=true&order=2" height="197" alt="Top languages graph" />
+        </div>
+    </section>
 
-        function typeInfo() {
-            if (infoIndex < infoText.length) {
-                infoElement.textContent += infoText[infoIndex];
-                infoIndex++;
-                setTimeout(typeInfo, 30); // Adjust typing speed
-            }
-        }
+    <section class="snake">
+        <img src="https://raw.githubusercontent.com/SHADOW269/SHADOW269/output/snake.svg" alt="Snake animation" />
+    </section>
 
-        // Start the typing animation
-        typeAsciiArt();
-    </script>
+    <section class="hobbies">
+        <h2>🎮 Hobbies / More:</h2>
+        <div class="hobbies-links">
+            <a href="https://discord.gg/Ma6SX4cQ8e" target="_blank" aria-label="Discord"><img src="https://skillicons.dev/icons?i=discord" alt="Discord" /></a>
+            <a href="https://www.keybr.com/profile/34zv4gh" target="_blank"><img src="https://www.keybr.com/cover.png" height="45" alt="Keybr typing challenge" /></a>
+            <a href="https://monkeytype.com/profile/shadow269" target="_blank"><img src="https://typingstats.com/partners/monkeytype.png" height="45" alt="Monkeytype typing stats" /></a>
+            <a href="https://roadmap.sh/u/shadow269" target="_blank"><img src="https://avatars.githubusercontent.com/u/120650344?s=200&v=4" height="45" alt="Roadmap profile" /></a>
+            <a href="https://tryhackme.com/p/SHADOW69" target="_blank"><img src="https://tryhackme-badges.s3.amazonaws.com/SHADOW69.png" alt="TryHackMe Badge" /></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sakshith C Shetty. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
