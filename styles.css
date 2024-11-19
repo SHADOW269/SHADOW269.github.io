@@ -1,5 +1,3 @@
-
-
 body {
     background-color: #0d1117;
     color: #c9d1d9;
@@ -7,17 +5,14 @@ body {
     padding: 0;
     position: relative; /* To ensure content is layered correctly */
     text-align: center;
-
 }
 
 h1, h2, h3, p {
     font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  font-variation-settings:
-    "ROND" 100;
-
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "ROND" 100;
 }
 
 #particles-js {
@@ -50,46 +45,35 @@ footer {
     padding: 20px;
 }
 
-.social-links a img {
-    margin: 0 10px;
-}
 
-.skill-icons img {
-    margin: 5px;
-}
-
-.stat-images img {
-    margin: 10px;
-}
-
-.github-stats-images img {
-    margin: 10px;
-}
-
-.hobbies-links a {
-    margin: 10px;
-}
-
-/* 3D tilt + Bouncy effect on hover */
+/* General Hover Effect with Smooth Transition */
 .social-links a img,
 .skill-icons img,
 .github-stats-images img,
-.hobbies-links a img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-origin: center; /* Ensures rotation from the center */
+.hobbies-links a img,
+.stats a img,
+.leetcode-stats {
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both hover-in and hover-out */
 }
 
+/* Hover Effects */
 .social-links a img:hover,
 .skill-icons img:hover,
 .github-stats-images img:hover,
-.hobbies-links a img:hover {
+.hobbies-links a img:hover,
+.stats a img:hover,
+.leetcode-stats:hover {
     transform: perspective(500px) rotateY(20deg) rotateX(10deg) scale(1.1) translateY(-5px); /* Tilt + Scale + Bounce */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Slight shadow to emphasize depth */
 }
 
+/* Active Effects (on click) */
 .social-links a img:active,
 .skill-icons img:active,
 .github-stats-images img:active,
-.hobbies-links a img:active {
+.hobbies-links a img:active,
+.stats a img:active,
+.leetcode-stats:active {
     transform: perspective(500px) rotateY(0deg) rotateX(0deg) scale(1) translateY(0); /* Reset bounce and tilt on click */
 }
