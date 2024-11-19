@@ -6,32 +6,97 @@
     <title>SHADOW</title>
     <style>
         body {
-            background-color: black;
+            background-color: #0f0f0f;
             color: #00ff00;
-            font-family: "Courier New", monospace;
-            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
         }
+
+        .title {
+            font-size: 36px;
+            white-space: pre;
+            line-height: 1.2;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
         a {
-            color: #00ffff;
+            color: #00ff00;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        .typing {
+            border-right: 2px solid #00ff00;
+            display: inline-block;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
         }
     </style>
 </head>
 <body>
-    <pre>
-    ███████╗██╗  ██╗ █████╗ ██████╗  ██████╗ ██╗    ██╗
-    ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔═══██╗██║    ██║
-    ███████╗███████║███████║██████╔╝██║   ██║██║ █╗ ██║
-    ╚════██║██╔══██║██╔══██║██╔═══╝ ██║   ██║██║███╗██║
-    ███████║██║  ██║██║  ██║██║     ╚██████╔╝╚███╔███╔╝
-    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝      ╚═════╝  ╚══╝╚══╝ 
-    </pre>
-    <p>Developer / Student / Gamer</p>
-    <p><a href="https://instagram.com/your-instagram">Instagram</a></p>
-    <p><a href="https://twitter.com/your-twitter">Twitter</a></p>
-    <p><a href="https://github.com/your-github">GitHub</a></p>
+    <div class="title" id="asciiArt"></div>
+    <div class="info" id="info"></div>
+
+    <script>
+        const asciiArt = `
+   _____ __    __  _____   _______ 
+  / ___/ \\ \\  / / /  _  \\ |  _____|
+ | |  _   \\ \\/ /  | |_| | | |___  
+ | | |_|   \\  /   |  _  { |  ___| 
+ | |___    / /    | |_| | | |____ 
+  \\____|  /_/     \\_____/ |______|
+        `;
+
+        const infoText = `
+Developer / Student / Gamer
+
+instagram : https://www.instagram.com/shadow_045/
+twitter   : https://twitter.com/shadow_045
+github    : https://github.com/shadowDev045
+youtube   : https://www.youtube.com/channel/YourChannel
+discord id: SHADOW#7422
+Mallucity : https://discord.gg/YOURSERVER
+Website   : https://yourwebsite.com
+Business  : shadow@proton.me
+`;
+
+        const asciiElement = document.getElementById('asciiArt');
+        const infoElement = document.getElementById('info');
+        let asciiIndex = 0;
+        let infoIndex = 0;
+
+        function typeAsciiArt() {
+            if (asciiIndex < asciiArt.length) {
+                asciiElement.textContent += asciiArt[asciiIndex];
+                asciiIndex++;
+                setTimeout(typeAsciiArt, 50); // Adjust typing speed
+            } else {
+                typeInfo();
+            }
+        }
+
+        function typeInfo() {
+            if (infoIndex < infoText.length) {
+                infoElement.textContent += infoText[infoIndex];
+                infoIndex++;
+                setTimeout(typeInfo, 30); // Adjust typing speed
+            }
+        }
+
+        // Start the typing animation
+        typeAsciiArt();
+    </script>
 </body>
 </html>
