@@ -1,14 +1,23 @@
+
+
 body {
     background-color: #0d1117;
     color: #c9d1d9;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     position: relative; /* To ensure content is layered correctly */
+    text-align: center;
+
 }
 
 h1, h2, h3, p {
-    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 100;
+
 }
 
 #particles-js {
