@@ -4,105 +4,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    position: relative; /* To ensure content is layered correctly */
 }
 
 h1, h2, h3, p {
     font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
 }
-
-header {
-    text-align: center;
-    margin-top: 20px;
-    border-bottom: 2px solid #7BD3EA;
-    padding-bottom: 20px;
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid #7BD3EA;
-    border-radius: 10px;
-    background-color: #161b22; /* Slightly darker background for sections */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-h2 {
-    color: #ffffff;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-h3, p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-a {
-    color: #c9d1d9;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
-}
-
-a:hover {
-    color: #7BD3EA;
-    border-bottom: 2px solid #7BD3EA;
-}
-
-.social-links a {
-    margin: 10px;
-    padding: 8px;
-    border-radius: 50%;
-    background-color: #161b22;
-    transition: background-color 0.3s;
-}
-
-.social-links a:hover {
-    background-color: #7BD3EA;
-}
-
-.skill-icons img, .stat-images img, .github-stats-images img, .hobbies-links img {
-    margin: 5px;
-    border-radius: 8px;
-    border: 2px solid #7BD3EA;
-    padding: 5px;
-    transition: transform 0.3s;
-}
-
-.skill-icons img:hover, .stat-images img:hover, .github-stats-images img:hover, .hobbies-links img:hover {
-    transform: scale(1.1);
-}
-
-h1.hero-title img {
-    max-width: 100%;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #161b22;
-    color: #8b949e;
-    border-top: 2px solid #7BD3EA;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .social-links a, .hobbies-links a {
-        display: block;
-        margin: 10px auto;
-    }
-
-    .skill-icons img {
-        max-width: 100%;
-    }
-
-    section {
-        margin: 5px;
-        padding: 15px;
-    }
-}
-
-
 
 #particles-js {
     position: absolute;
@@ -110,6 +17,46 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0d1117;  /* Dark background for contrast */
-    z-index: -1;  /* Place it behind other content */
+    background-color: #0d1117; /* Dark background for contrast */
+    z-index: -1; /* Place particles behind content */
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-title img {
+    max-width: 100%;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.social-links a img {
+    margin: 0 10px;
+}
+
+.skill-icons img {
+    margin: 5px;
+}
+
+.stat-images img {
+    margin: 10px;
+}
+
+.github-stats-images img {
+    margin: 10px;
+}
+
+.hobbies-links a {
+    margin: 10px;
 }

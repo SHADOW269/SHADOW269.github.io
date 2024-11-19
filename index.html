@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHADOW - Futuristic Design</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Particles container (added this) -->
+    <div id="particles-js"></div>
+
     <header>
         <h1 class="hero-title">
             <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=2500&lines=YO+🤚;+I'm+Sakshith+C+Shetty!;+Also+Know+As+SHADOW;" alt="Hero title with typing animation" />
@@ -69,27 +73,26 @@
         </div>
     </section>
 
-    <div id="particles-js"></div>
-
     <footer>
         <p>&copy; 2024 Sakshith C Shetty. All Rights Reserved.</p>
     </footer>
 
+    <!-- Include Particles.js Config -->
     <script>
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 80, // Number of particles
+                    value: 80,
                     density: {
                         enable: true,
                         value_area: 800
                     }
                 },
                 color: {
-                    value: "#7BD3EA" // Particle color (same as your hover color)
+                    value: "#7BD3EA"
                 },
                 shape: {
-                    type: "circle", // Shape of the particles
+                    type: "circle"
                 },
                 opacity: {
                     value: 0.5,
@@ -102,7 +105,7 @@
                     }
                 },
                 size: {
-                    value: 3, // Particle size
+                    value: 3,
                     random: true,
                     anim: {
                         enable: true,
@@ -114,7 +117,7 @@
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: "#7BD3EA", // Color of the lines between particles
+                    color: "#7BD3EA",
                     opacity: 0.4,
                     width: 1
                 },
@@ -133,11 +136,11 @@
                 events: {
                     onhover: {
                         enable: true,
-                        mode: "repulse" // Mode where particles move away from the mouse on hover
+                        mode: "repulse"
                     },
                     onclick: {
                         enable: true,
-                        mode: "push" // Adds more particles on mouse click
+                        mode: "push"
                     }
                 },
                 modes: {
@@ -153,6 +156,5 @@
             retina_detect: true
         });
     </script>
-        
 </body>
 </html>
